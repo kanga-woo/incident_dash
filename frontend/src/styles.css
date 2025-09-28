@@ -1,0 +1,91 @@
+:root {
+  --bg: #0f172a;
+  --panel: #0b1220;
+  --muted: #9aa4b2;
+  --accent: #7c3aed;
+  --card: #0f1724;
+  --white: #e6eef8;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #071024, #081026);
+  color: var(--white);
+  height: 100vh;
+}
+
+.topbar {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.02);
+}
+
+.layout {
+  display: flex;
+  height: calc(100vh - 72px);
+}
+
+.app .layout > * {
+  padding: 12px;
+}
+
+.incident-list {
+  width: 320px;
+  border-right: 1px solid rgba(255,255,255,0.03);
+  overflow: auto;
+}
+
+.incident-card {
+  background: rgba(255,255,255,0.02);
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.incident-card.selected {
+  box-shadow: 0 0 0 2px rgba(124,58,237,0.12);
+  border-left: 4px solid var(--accent);
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section {
+  margin-top: 16px;
+  background: rgba(255,255,255,0.01);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.btn {
+  background: var(--accent);
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.annotation {
+  background: rgba(255,255,255,0.02);
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: var(--white);
+}
+.empty {
+  color: var(--muted);
+  padding: 24px;
+}
